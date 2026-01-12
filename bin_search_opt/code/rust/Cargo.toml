@@ -3,6 +3,9 @@ name = "rust"
 version = "0.1.0"
 edition = "2024"
 
+[toolchain]
+channel = "stable"
+
 [dependencies]
 rand = "0.10.0-rc.6"
 

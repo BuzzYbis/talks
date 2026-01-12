@@ -95,25 +95,24 @@ pub fn benchmark_performance(n: usize,) {
     println!("  -> Latency:    \x1b[1;32m{:.2} ns/op\x1b[0m", ns_per_op);
 
 
-    // // Ordering data for Eytzinger version
-    // let data_eytzinger = create_layout_eytzinger(&data,);
-    // drop(data,);
-    //
-    // println!("\nBenchmark Eytzinger prefetched branchless lower bound:");
-    //
-    // let start = Instant::now();
-    //
-    // for target in &targets {
-    //     checksum +=
-    //         eytzinger::lower_bound_prefetched_branchless(&data_eytzinger, target,)
-    //             .unwrap_or(0,);
-    // }
-    //
-    // let duration = start.elapsed();
-    // let ns_per_op = duration.as_nanos() as f64 / queries as f64;
-    //
-    // println!("  -> Total time: {:.2?}", duration);
-    // println!("  -> Latency:    \x1b[1;32m{:.2} ns/op\x1b[0m", ns_per_op);
+    // Ordering data for Eytzinger version
+    let data_eytzinger = create_layout_eytzinger(&data,);
+
+    println!("\nBenchmark Eytzinger prefetched branchless lower bound:");
+
+    let start = Instant::now();
+
+    for target in &targets {
+        checksum +=
+            eytzinger::lower_bound_prefetched_branchless(&data_eytzinger, target,)
+                .unwrap_or(0,);
+    }
+
+    let duration = start.elapsed();
+    let ns_per_op = duration.as_nanos() as f64 / queries as f64;
+
+    println!("  -> Total time: {:.2?}", duration);
+    println!("  -> Latency:    \x1b[1;32m{:.2} ns/op\x1b[0m", ns_per_op);
 
 
     // Ordering data for stree version

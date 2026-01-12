@@ -138,6 +138,7 @@ fn simd_intrinsic_upper(ptr: *const i32, target: i32,) -> usize {
 }
 
 
+#[inline(always)]
 fn distribute_child_sizes(mut n: usize,) -> [usize; 17] {
     let mut sizes = [0; 17];
 
