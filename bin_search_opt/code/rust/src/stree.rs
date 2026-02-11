@@ -266,7 +266,7 @@ impl_bound_stree!(upper_bound, simd_intrinsic_upper);
 
 #[cfg(test)]
 mod tests {
-    use rand::Rng;
+    use rand::RngExt;
 
     use super::*;
 
@@ -351,18 +351,18 @@ mod tests {
 
     #[test]
     fn test_lower_bound_fuzzy() {
-        let mut rng = rand::thread_rng();
+        let mut rng = rand::rng();
 
         // 1. Generate Random Data with duplicates
         let n = 2000;
-        let mut data: Vec<i32,> = (0..n).map(|_| rng.gen_range(0..100,),).collect();
+        let mut data: Vec<i32,> = (0..n).map(|_| rng.random_range(0..100,),).collect();
         data.sort_unstable(); // Must be sorted
 
         let layout = create_layout_stree(&data,);
 
         // 2. Test random targets
         for _ in 0..1000 {
-            let target = rng.gen_range(0..110,);
+            let target = rng.random_range(0..110,);
 
             // Get Truth
             let truth_idx = std_lower_bound(&data, target,);
@@ -411,7 +411,7 @@ mod tests {
 
     #[test]
     fn test_upper_bound_fuzzy() {
-        let mut rng = rand::thread_rng();
+        let mut rng = rand::rng();
 
         // 1. Generate Random Data with duplicates
         let n = 2000;
