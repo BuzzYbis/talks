@@ -7,7 +7,7 @@ edition = "2024"
 channel = "stable"
 
 [dependencies]
-rand = "0.10.0-rc.6"
+rand = "0.10.0"
 
 [profile.release]
 opt-level = 3

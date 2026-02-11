@@ -4,7 +4,7 @@ mod stree;
 
 use std::time::Instant;
 
-use rand::{Rng, SeedableRng};
+use rand::{RngExt, SeedableRng};
 
 use crate::{eytzinger::create_layout_eytzinger, stree::create_layout_stree};
 
