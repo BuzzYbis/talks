@@ -15,6 +15,8 @@ To build the code snippet:
     ```shell
     cargo run --release
     ```
+    inside the [./code/rust](./code/rust) directory.
+  
 Be careful the code will generate approximately 24GB of data in RAM. 
 Ensure that you have at least 48GB of RAM to see the true performance of the implementations. 
 
