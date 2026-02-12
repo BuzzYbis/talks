@@ -1,0 +1,52 @@
+a_ds: 
+  type: book
+  title: "A-DS: Semester 1"
+  author: "BuzzY_"
+  url: https://github.com/Omnium-Scientia/A-DS
+
+alg_eytzinger:
+  type: web 
+  title: "Algorithmica: Eytzinger Binary Search"
+  author: "Sergey Slotin"
+  url: https://algorithmica.org/en/eytzinger
+
+alg_stree:
+  type: web 
+  title: "Algorithmica: Implicit Static B-trees"
+  author: "Sergey Slotin"
+  url: https://algorithmica.org/en/b-tree
+
+a_layout: 
+  type: article 
+  title: "ARRAY LAYOUTS FOR COMPARISON-BASED SEARCHING"
+  author: ["Paul-Virak Khuong", "Pat Morin"]
+  date: 2017-03-17
+  arxiv: "1509.05053"
+  url: https://arxiv.org/pdf/1509.05053
+
+mod_micro: 
+  type: web 
+  title: "Modern microprocessors: a 90 minutes guide"
+  author: "Jason Robert Carey Patterson"
+  date: 2025-10
+  url: https://www.lighterra.com/papers/modernmicroprocessors/
+
+cache_ob:
+  type: article
+  title: "Cache-Oblivious Algorithms and Data Structures"
+  author: "Erik D. Demaine"
+  url: https://erikdemaine.org/papers/BRICS2002/paper.pdf
+
+ev_mem:
+  type: article
+  title: "What Every Programmer Should Know About Memory"
+  author: "Ulrich Drepper"
+  date: 2007-11-01
+  url: https://people.freebsd.org/~lstewart/articles/cpumemory.pdf
+
+perf_hints: 
+  type: web 
+  title: "Performance hints"
+  author: ["Jeff Dean", "Sanjay Ghemawat"]
+  date: 2025-12-16
+  url: https://abseil.io/fast/hints
